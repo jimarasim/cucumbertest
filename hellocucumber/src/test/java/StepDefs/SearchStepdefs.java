@@ -1,4 +1,5 @@
-package hellocucumber;
+package StepDefs;
+
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -13,7 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SearchStepdefs {
-    String url;
     WebDriver driver;
     WebElement searchTextbox;
 
@@ -30,8 +30,7 @@ public class SearchStepdefs {
     @Given("^The Craigslist home page is loaded$")
     public void the_craigslist_home_page_is_loaded() throws Exception {
         // Write code here that turns the phrase above into concrete actions
-        this.url = "https://seattle.craigslist.com";
-        driver.get(this.url);
+        driver.get("https://seattle.craigslist.com");
     }
 
     @Given("^The search textbox is enabled$")
@@ -40,10 +39,10 @@ public class SearchStepdefs {
         Assert.assertTrue(searchTextbox.isEnabled());
     }
 
-    @When("^I enter a search term and press enter$")
-    public void i_enter_a_search_term_and_press_enter() throws Exception {
+    @When("^I enter the search term \"([^\"]*)\" and press enter$")
+    public void i_enter_a_search_term_and_press_enter(String searchterm) throws Exception {
         // Write code here that turns the phrase above into concrete actions
-        searchTextbox.sendKeys("honda");
+        searchTextbox.sendKeys(searchterm);
         searchTextbox.sendKeys(Keys.ENTER);
     }
 
