@@ -1,0 +1,18 @@
+Feature: Test facebook smoke scenarios
+
+  Scenario Outline: Test login with valid credential [90m# features/MyApplication.feature:3[0m
+    [36mGiven open "<browser>" and load facebook application[0m
+    [36mWhen I enter a valid username and password[0m
+    [36mThen User should be able to log in successfully[0m
+
+    Examples: 
+
+  Scenario Outline: Test login with valid credential   [90m# features/MyApplication.feature:10[0m
+    [32mGiven [0m[32mopen "[0m[32m[1mfirefox[0m[32m" and load facebook application[0m [90m# SmokeTest.open_and_load_facebook_application(String)[0m
+    [32mWhen [0m[32mI enter a valid username and password[0m         [90m# SmokeTest.i_enter_a_valid_username_and_password()[0m
+    [32mThen [0m[32mUser should be able to log in successfully[0m    [90m# SmokeTest.user_should_be_able_to_log_in_successfully()[0m
+
+  Scenario Outline: Test login with valid credential  [90m# features/MyApplication.feature:11[0m
+    [32mGiven [0m[32mopen "[0m[32m[1mchrome[0m[32m" and load facebook application[0m [90m# SmokeTest.open_and_load_facebook_application(String)[0m
+    [32mWhen [0m[32mI enter a valid username and password[0m        [90m# SmokeTest.i_enter_a_valid_username_and_password()[0m
+    [32mThen [0m[32mUser should be able to log in successfully[0m   [90m# SmokeTest.user_should_be_able_to_log_in_successfully()[0m
