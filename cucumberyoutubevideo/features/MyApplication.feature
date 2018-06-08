@@ -1,11 +1,16 @@
 Feature: Test facebook smoke scenarios
 
+  Background:
+    Given theres an open chrome browser
+
   Scenario Outline: Test login with valid credential
-    Given open "<browser>" and load facebook application
-    When I enter a valid username and password
-    Then User should be able to log in successfully
+    Given i load the facebook web application
+    When I enter an invalid username "<username>"
+    And I enter an invalid password "<password>"
+    And Click the login button
+    Then User should not be logged in
 
     Examples:
-    |browser|
-    |firefox|
-    |chrome |
+    |username         |password|
+    |joe@buck.com     | fake   |
+    |loser@loser.com  | fake   |
