@@ -33,8 +33,8 @@ public class SmokeTest {
 
     @When("I enter a valid username and password")
     public void i_enter_a_valid_username_and_password() {
-        driver.findElement(By.id("email")).sendKeys("jaemzware@hotmail.com");
-        driver.findElement(By.id("pass")).sendKeys("Face@Book");
+        driver.findElement(By.id("email")).sendKeys("");
+        driver.findElement(By.id("pass")).sendKeys("");
 
 
     }
