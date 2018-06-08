@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchStepdefs.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchStepdefs.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/StepDefs/SearchStepdefs.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
@@ -63,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunCucumberTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RunCucumberTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/hellocucumber/RunCucumberTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -983,16 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/hellocucumber/RunCucumberTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="117" lean-forward="false" selection-start-line="7" selection-start-column="117" selection-end-line="7" selection-end-column="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1019,6 +1009,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/hellocucumber/RunCucumberTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="117" lean-forward="false" selection-start-line="7" selection-start-column="117" selection-end-line="7" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
