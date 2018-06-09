@@ -27,6 +27,15 @@ public class FacebookLoginPage extends BasePage {
         return "https://www.facebook.com";
     }
 
+
+    public boolean emailIsEnabled() {
+        return emailTextbox.isEnabled();
+    }
+
+    public boolean passwordIsEnabled() {
+        return passwordTextbox.isEnabled();
+    }
+
     public void clickLoginButton() {
         loginButton.click();
     }
@@ -51,12 +60,5 @@ public class FacebookLoginPage extends BasePage {
         return this;
     }
 
-    public boolean emailIsEnabled() {
-        return emailTextbox.isEnabled();
-    }
-
-    public boolean passwordIsEnabled() {
-        return passwordTextbox.isEnabled();
-    }
 
 }

@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cucumberyoutubevideo" />
+        <module name="cucumbertest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cucumberyoutubevideo" target="1.8" />
+      <module name="cucumbertest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
