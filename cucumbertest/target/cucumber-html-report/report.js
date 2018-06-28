@@ -1,85 +1,34 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/facebook.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/craigslist.feature");
 formatter.feature({
-  "name": "Test facebook smoke scenarios",
+  "name": "Test Craigslist Smoke test scenarios",
   "description": "",
-  "keyword": "Feature"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "theres an open chrome browser",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "FacebookTest.theres_an_open_chrome_browser()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Forgot Password",
-  "description": "",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "name": "i load the facebook web application",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "FacebookTest.i_load_the_facebook_web_application()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i click the forgot account link",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "FacebookTest.i_click_the_forgot_account_link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i see the Find Your Account form",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "FacebookTest.i_see_the_Find_Your_Account_form()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@craigslist"
+    }
+  ]
 });
 formatter.scenarioOutline({
-  "name": "Test login with valid credential",
+  "name": "Search results contain search term in title",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@barbie"
+    }
+  ]
 });
 formatter.step({
-  "name": "i load the facebook web application",
+  "name": "the search text box is enabled",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "I enter an invalid username \"\u003cusername\u003e\"",
+  "name": "I enter the search term \"\u003ctext\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "name": "I enter an invalid password \"\u003cpassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click the login button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "User should not be logged in",
+  "name": "All search results should have \"\u003ctext\u003e\" or a dollar amount in the title",
   "keyword": "Then "
 });
 formatter.examples({
@@ -89,20 +38,17 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "username",
-        "password"
+        "text"
       ]
     },
     {
       "cells": [
-        "joe@buck.com",
-        "fake"
+        "barbie"
       ]
     },
     {
       "cells": [
-        "loser@loser.com",
-        "fake"
+        "honda"
       ]
     }
   ]
@@ -117,62 +63,60 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "FacebookTest.theres_an_open_chrome_browser()"
+  "location": "BaseTest.theres_an_open_chrome_browser()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the craigslist web application home page is navigated to",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "CraigslistTest.the_craigslist_web_application_home_page_is_navigated_to()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Test login with valid credential",
+  "name": "Search results contain search term in title",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@craigslist"
+    },
+    {
+      "name": "@barbie"
+    }
+  ]
 });
 formatter.step({
-  "name": "i load the facebook web application",
+  "name": "the search text box is enabled",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "FacebookTest.i_load_the_facebook_web_application()"
+  "location": "CraigslistTest.the_search_text_box_is_enabled()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter an invalid username \"joe@buck.com\"",
+  "name": "I enter the search term \"barbie\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "FacebookTest.i_enter_an_invalid_username(String)"
+  "location": "CraigslistTest.i_enter_the_search_term(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter an invalid password \"fake\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "FacebookTest.i_enter_an_invalid_password(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click the login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "FacebookTest.click_the_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User should not be logged in",
+  "name": "All search results should have \"barbie\" or a dollar amount in the title",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "FacebookTest.user_should_not_be_logged_in()"
+  "location": "CraigslistTest.all_search_results_should_have_in_the_title(String)"
 });
 formatter.result({
   "status": "passed"
@@ -190,62 +134,60 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "FacebookTest.theres_an_open_chrome_browser()"
+  "location": "BaseTest.theres_an_open_chrome_browser()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the craigslist web application home page is navigated to",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "CraigslistTest.the_craigslist_web_application_home_page_is_navigated_to()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Test login with valid credential",
+  "name": "Search results contain search term in title",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@craigslist"
+    },
+    {
+      "name": "@barbie"
+    }
+  ]
 });
 formatter.step({
-  "name": "i load the facebook web application",
+  "name": "the search text box is enabled",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "FacebookTest.i_load_the_facebook_web_application()"
+  "location": "CraigslistTest.the_search_text_box_is_enabled()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter an invalid username \"loser@loser.com\"",
+  "name": "I enter the search term \"honda\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "FacebookTest.i_enter_an_invalid_username(String)"
+  "location": "CraigslistTest.i_enter_the_search_term(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter an invalid password \"fake\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "FacebookTest.i_enter_an_invalid_password(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click the login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "FacebookTest.click_the_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User should not be logged in",
+  "name": "All search results should have \"honda\" or a dollar amount in the title",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "FacebookTest.user_should_not_be_logged_in()"
+  "location": "CraigslistTest.all_search_results_should_have_in_the_title(String)"
 });
 formatter.result({
   "status": "passed"

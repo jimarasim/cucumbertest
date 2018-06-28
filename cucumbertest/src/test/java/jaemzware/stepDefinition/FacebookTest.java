@@ -16,16 +16,10 @@ public class FacebookTest {
 
     FacebookLoginPage facebookLoginPage;
     FacebookForgotAccountPage facebookForgotAccountPage;
-    RemoteWebDriver driver;
-
-    @Given("theres an open chrome browser")
-    public void theres_an_open_chrome_browser() throws Exception {
-        driver = WebDriverFactory.getDriver(Browser.CHROME);
-    }
 
     @Given("i load the facebook web application")
     public void i_load_the_facebook_web_application() {
-        facebookLoginPage = new FacebookLoginPage(driver);
+        facebookLoginPage = new FacebookLoginPage(BaseTest.driver);
         facebookLoginPage.navigate();
     }
 
@@ -63,8 +57,4 @@ public class FacebookTest {
         Assert.assertTrue(facebookForgotAccountPage.searchButtonEnabled());
     }
 
-    @After
-    public void after(){
-        driver.quit();
-    }
 }
